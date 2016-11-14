@@ -14,11 +14,12 @@ function isPalindrome(testInt) {
 
     // To test if a decimal integer is a palindrome, we can simply compare it to it's reverse
     // Convert both to string (not necessary, we can also just do a == comparison)
-    if (testInt.toString() === testInt.toString().split("").reverse().join("")) {
+    if (testInt === testInt.toString().split("").reverse().join("")) {
         return true;
     } else {
         return false;
     }
 }
 
-// What is BigO ? (Largely relies on what the built in string functions "cost"
+var args = process.argv.slice(2);
+console.log('Is ', args[0], ' a palindrome? ', isPalindrome(args[0]));
